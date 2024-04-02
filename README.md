@@ -3,10 +3,10 @@
 Aplicación para realizar gestión de portafolios y predicciones del mercado.
 
 # DOCKER IMAGE
-
+  Pipe line en construcción :star:
 # Descargar archivo binario para Windows 
 
-Pipe line en proceso.
+
 
 # Descargar código fuente y ejectuar
 
