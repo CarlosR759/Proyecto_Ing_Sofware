@@ -23,7 +23,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install numpy pandas pyinstaller
     - name: windows exec builder
-      run: pyinstaller --onefile 
+      run: pyinstaller --onefile main.py
     - name: Upload aftifact
       uses: actions/upload-artifact@v2
       with:
