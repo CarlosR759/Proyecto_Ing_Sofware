@@ -24,8 +24,15 @@ jobs:
         pip install numpy pandas pyinstaller
     - name: windows exec builder
       run: pyinstaller --onefile main.py
-    - name: Upload aftifact
+      
+    - name: check if executable exists
+      run: ls dist/moonLanding.exe
+      continue-on-error: true
+      id: check_executable
+      
+    - name: Upload Artifact
+      if: ${{ success() && steps.check_executable.outputs.exit-code == 0 }}
       uses: actions/upload-artifact@v2
       with:
-        name: exectuable
-        path: dist/moonLanding.exe
+        name: executable
+        path: myApp.exe
